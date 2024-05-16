@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enigma</title>
+        <link rel="shortcut icon" href="https://th.bing.com/th/id/OIG.YUE9SDFvPtPazP34kY9.?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn" type="image/png">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <header>
+            <div>
+                <h3><a href="main.html">Головна</a></h3> 
+                <h3><a href="work.html">Принцип роботи</a></h3> 
+                <h3><a href="hystory.html">Додаткова інформація</a></h3>
+                <h3><a href="enigma.html">Симулятор Enigma</a></h3>
+                <h3><a href="labjs.html">Лабораторні роботи по JavaScript</a></h3>
+            </div> 
+        </header>
+         <main>
+            <div>
+                <ul style="list-style-type: none; padding: 0; margin-left: 33%;">
+                    <a name="begin"></a>
+                  <li><a href="#lac" style="text-decoration: none; color: black;">Лаконічна схема роботи Enigma</a></li>
+                  <li><a href="#calc" style="text-decoration: none; color: black;">Обчислення загальної кількості варіантів налаштувань військової Enigma 1939р.</a></li>
+                  <li><a href="#det" style="text-decoration: none; color: black;">Детальний опис роботи Enigma</a></li>
+                </ul>
+              </div>
+              <hr style="width: 80%;">
+        <div>
+            <a name="lac"></a>
+            <h3 align="center">Лаконічна схема роботи Enigma</h3>
+            <div class="lacimg">
+                <img src="https://static.guim.co.uk/ni/1415981437904/Enigma_Machine_WEB.svg" alt="">
+            </div>
+
+        </div>
+        <hr  style="width: 80%;">
+        <div>
+            <a name="calc"></a>
+            <h3 align="center">Обчислення загальної кількості варіантів налаштувань військової Enigma 1939р.</h3>
+            <div style="width: 500px; margin: 0 auto;">
+                <ul type="square">
+                    <li><p>Обрати 3 ротора з 5: 5 &times; 4 &times; 3 = 60 </p></li>
+                    <li><p>Для кожного ротора є 26 стартових позицій: 26 &times; 26 &times; 26 = 17576</p></li>
+                    <li>
+                        <p>Комунікаційна панель з 10 з'єднувачів, що з'єднують 2 літери, які будуть взаємно замінюватися: </p>
+                        <p>$$ \frac{26!}{6! \times 10! \times 2^{10}} = 150,738,274,937,250 $$</p>
+                    </li>
+                    <li><p>Загалом: 158,962,555,217,826,360,000</p></li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="howitworks">
+            <a name="det"></a>
+            <h3 align="center">Детальний опис роботи Enigma</h3>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 650px !important; width: 100%; margin-left: auto; margin-right: auto;">
+                <div class="carousel-inner">
+                  <div class="carousel-item active"  style="position: none !important;">
+                    <div class="grid-raw">
+                    <div class="grid-cell">      
+                        <figure>
+                            <img src="IM/1pr.png" class="d-block w-100" alt="...">
+                            <figcaption>
+                                Малюнок 1
+                            </figcaption>
+                        </figure>        
+                    </div>
+                    <div class="grid-cell">
+                        <p>На малюнку 1 показаний вид зверху типової машини Enigma, розширений, щоб ви могли бачити деталі. У нижній частині малюнка розташована клавіатура за стандартною німецькою розкладкою. Над клавіатурою розташовані три ряди ламп. При натисканні клавіші вмикається одна з лампочок, вказуючи тим самим на закодовану версію цієї літери. Відображення від клавіш до ламп контролюється трьома коліщатками у верхній частині діаграми, які називаються
+                            ротори. Кожен ротор — який у військових машинах Enigma можна було вибрати з п’яти роторів, з яких будь-які три можна було використовувати в будь-якому порядку — можна встановити на будь-яку з 26 позицій, що відповідають буквам алфавіту. Вікна дисплея у верхній частині рисунка показують літери JLY. Три літери разом називають налаштуванням ротора. Ротори Enigma є тривимірними, тому їх, на жаль, важко
+                            відобразити на друкованій сторінці. Літери, які ви бачите через вікна дисплея, надруковані по колу ротора. Лівий і правий краї ротора мають 26 електричних контактів, вирівняних за 26 літерами. Ці контакти з’єднані через ротор так, що кожен контакт ліворуч з’єднується з контактом праворуч у певному зашифрованому порядку. Тому кожен ротор реалізує зміну порядку літер алфавіту, яку математики називають перестановкою.</p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="grid-raw">
+                        <div class="grid-cell">
+                            <p>Діаграма ліворуч показує, як виглядає ротор, якщо дивитися вздовж його осі. Літери оточують ротор, а контакти, показані на зовнішньому краю, проходять через ротор і з’єднуються з контактом у внутрішньому колі, який фізично знаходиться на протилежній стороні самого ротора. Контакт A на цьому боці ротора з’єднується з контактом E на зворотному боці, як показано на схемі жирною лінією. <br> На діаграмі праворуч показано схематичне зображення, на якому з’єднання на роторі розташовані лінійно. Ця схема має таке ж підключення, як показано з’єднанням між A праворуч і E ліворуч. Коли ви дивитесь на цей «розгорнутий» вид, ви повинні мати на увазі, що верхня і нижня частини прямокутника фактично з’єднані разом, щоб утворити коло.</p>
+                        </div>
+                        <div class="grid-cell">
+                            <figure>
+                                <img src="IM/2pr.png" class="d-block w-100" alt="">
+                                <figcaption>
+                                    Малюнок 2
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>                  </div>
+                  <div class="carousel-item">
+                    <div class="grid-raw">
+                        <div class="grid-cell">
+                            <figure>
+                                <img src="IM/3pr.png" alt="" class="d-block w-100">
+                                <figcaption>
+                                    Малюнок 3
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="grid-cell">
+                            <p>На малюнку 3 показано внутрішню структуру машини Enigma, зосереджуючись на тому, як з’єднання трьох роторів дає змогу шифрувати інформацію, коли вона переходить від однієї сторони машини до іншої. Введення символу на клавіатурі автоматично просуває ротор праворуч, тим самим змінюючи схему з’єднань всередині машини. Коли крайній правий ротор завершує повний оборот, середній ротор просувається на один крок; майже таким же чином завершення оберту середнього ротора просуває крайній лівий ротор. Тому ротори просуваються таким чином, що нагадує одометр на автомобілі. Правий ротор просувається з кожним символом і тому називається швидким ротором. Середній ротор просувається кожні 26 символів і називається середнім ротором. Лівий ротор просувається лише один раз кожні 676 (26 × 26) символів і називається повільним ротором</p>
+                        </div>
+                    </div>                  </div>
+                  <div class="carousel-item">
+                    <div class="grid-raw">
+                        <div class="grid-cell">
+                            <p>Натискання клавіші A пересуває швидкий ротор, який змінює налаштування ротора з JLY на JLZ. Потім машина «Енігма» подає струм до дроту, що йде від клавіші А на правому краю діаграми, і в той же час від’єднує лампу А, щоб з’явилася лише зашифрована версія літери. Струм тече від ключа А через кожен із трьох роторів, рухаючись справа наліво. Потім він переходить в елемент схеми, який називається рефлектором, який реалізує фіксовану перестановку. Від рефлектора струм тече назад через ротори у зворотному напрямку. Як показано на схемі, струм, ініційований введенням A, потрапляє на дріт, позначений B, що спричиняє загоряння лампи B. Таким чином, враховуючи налаштування ротора JLZ, форма зашифрованого тексту літери A є B.</p>
+                        </div>
+                        <div class="grid-cell">
+                            <figure>
+                                <img src="IM/4pr.png" alt="" class="d-block w-100">
+                                <figcaption>
+                                    Малюнок 4
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>                  </div>
+                  <div class="carousel-item">
+                    <div class="grid-raw">
+                        <div class="grid-cell">
+                            <figure>
+                                <img src="IM/5pr.png" alt="" class="d-block w-100">
+                                <figcaption>
+                                    Малюнок 5
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="grid-cell">
+                            <p>Шаблони шифрування, створені машиною Enigma, важко зламати, оскільки кодування змінюється для кожного символу. Якщо оператор набирає другу букву A одразу після першої, швидкий ротор знову просувається вперед, що цього разу завершує малюнок 3. Структурна схема машини Enigma, що показує налаштування ротора JLY – 4 – малюнок 4. Машина Enigma після натискання кнопки Ключовий алфавіт і цикли назад до A. Завершення циклу викликає «перенесення» до середнього ротора, який просувається від L до M. Враховуючи налаштування ротора JMA, літера A перекладається на літеру F, як показано на малюнку.</p>
+                            <p>На цьому етапі корисно відзначити фундаментальну симетрію в дизайні Enigma. Якщо A перетворюється на F при певному налаштуванні ротора, має бути також випадок, що F перетворюється на A. Схема точно така ж; єдина відмінність полягає в тому, що струм тече в протилежному напрямку. Ця симетрія дуже корисна для операторів Enigma, оскільки це означає, що відправнику та одержувачу не потрібно мати два різних ключа. Відправник встановлює ротори відповідно до кодової книги та вводить повідомлення. На світло виходить зашифрований текст, який зазвичай передається по радіоканалу азбукою Морзе. Поки отримувач використовує ту саму книгу кодів і налаштовує машину таким же чином, введення зашифрованого тексту відновлює вихідне повідомлення, оскільки шифрування є оборотним. Як це трапляється, той факт, що кодування є оборотним, також полегшує його зламування</p>
+                        </div>
+                    </div>
+                                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Попередній</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            
+    </div>
+</div>
+</main>
+<footer style="bottom: 0; width: 100%; height:40px;background-color: #18324E; color: #f5f5f4; text-align:center;">
+    <p>&copy; 2023 студентка групи 2БС-22б Григорук Надія</p>
+  </footer>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enigma</title>
+        <link rel="shortcut icon" href="https://th.bing.com/th/id/OIG.YUE9SDFvPtPazP34kY9.?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn" type="image/png">
+        <link href="style.css" rel="stylesheet">
+        <style>
+                .container {
+                    width: 70%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .left-div, .right-div {
+                    display: inline-block;
+                    width: 48%;
+                    vertical-align: top;
+           
+                }
+            </style>
+    </head>
+    <body>
+        <header>
+           <div>
+            <h3><a href="main.html">Головна</a></h3> 
+            <h3><a href="work.html">Принцип роботи</a></h3> 
+            <h3><a href="hystory.html">Додаткова інформація</a></h3>
+            <h3><a href="enigma.html">Симулятор Enigma</a></h3>
+            <h3><a href="labjs.html">Лабораторні роботи по JavaScript</a></h3>
+        </div> 
+        </header>
+        <main>
+            
+            
+            <div class="container">
+                <div class="left-div">
+                        <h4>форма, яку необхідно зробити</h4>
+                        <img src="IM/form.png" alt="" style="width: 400px;">
+                </div>
+                <div class="right-div">
+                     <h4>сама форма</h4>
+
+                    <form action="" method="POST"  onsubmit="return getInfo()">
+                        <fieldset style="background-color:  #b3ccff; margin-top: 3%;">
+                            <b style="margin-top: 30px; margin-left: 1%;">будь ласка, введіть вашу персональну інформацію:</b>
+                            <table cellpadding="5px">
+                                <tr>
+                                    <td>Ім’я: *</td>
+                                    <td><input type='text' id='firstname' style='width: 100px;'required></td>
+                                </tr>
+                                <tr>
+                                    <td>Прізвище: *</td>
+                                    <td><input type='text' style='width: 100px;' name='lastname' required></td>
+                                </tr>
+                                <tr>
+                                    <td>Адреса проживання: </td>
+                                    <td><input type='text' name='address' required></td>
+                                </tr>
+                                <tr>
+                                    <td>Місто: </td>
+                                    <td><input type='text' style='width: 100px;' name='city' required></td>
+                                </tr>
+                                <tr>
+                                    <td>Поштовий індекс: </td>
+                                    <td><input type='number' style='width: 80px;' name='postcode' required></td>
+                                </tr>
+                                <tr>
+                                    <td>Номер: </td>
+                                    <td><input type='tel' style='width: 100px;' name='number' required></td>
+                                </tr>
+                                <tr>
+                                    <td>Email: *</td>
+                                    <td><input type='email' name='email' required></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <center><input type="reset"></center>
+                                        <center><input type="submit" value="Зареєструвати"></center>
+                                    </td>
+                                </tr>
+                            </table>
+                            <b style="font-size: 10px; margin-left: 30%;">поля, позначені * - обов'язкові</b>
+
+                        </fieldset>
+                    </form>
+                </div>
+            
+       
+   <div style="width: 60%; margin-left: auto; margin-right: auto; margin-top: 20px;">
+    <fieldset>
+        <legend>Інформація з форми:</legend>
+        <table id="infoTable" cellpadding="5px">
+        </table>
+    </fieldset>
+</div>
+
+   <script>
+    function getInfo() {
+        var firstName = document.getElementById("firstname").value;
+        var lastName = document.getElementsByName("lastname")[0].value;
+        var address = document.getElementsByName("address")[0].value;
+        var city = document.getElementsByName("city")[0].value;
+        var postcode = document.getElementsByName("postcode")[0].value;
+        var number = document.getElementsByName("number")[0].value;
+        var email = document.getElementsByName("email")[0].value;
+        
+        var infoTable = document.getElementById("infoTable");
+        infoTable.innerHTML = "";
+        
+        var row1 = infoTable.insertRow();
+        row1.insertCell(0).innerHTML = "Ім'я:";
+        row1.insertCell(1).innerHTML = firstName;
+        
+        var row2 = infoTable.insertRow();
+        row2.insertCell(0).innerHTML = "Прізвище:";
+        row2.insertCell(1).innerHTML = lastName;
+        
+        var row3 = infoTable.insertRow();
+        row3.insertCell(0).innerHTML = "Адреса проживання:";
+        row3.insertCell(1).innerHTML = address;
+        
+        var row4 = infoTable.insertRow();
+        row4.insertCell(0).innerHTML = "Місто:";
+        row4.insertCell(1).innerHTML = city;
+        
+        var row5 = infoTable.insertRow();
+        row5.insertCell(0).innerHTML = "Поштовий індекс:";
+        row5.insertCell(1).innerHTML = postcode;
+        
+        var row6 = infoTable.insertRow();
+        row6.insertCell(0).innerHTML = "Номер:";
+        row6.insertCell(1).innerHTML = number;
+        
+        var row7 = infoTable.insertRow();
+        row7.insertCell(0).innerHTML = "Email:";
+        row7.insertCell(1).innerHTML = email;
+        
+        return false;
+    }
+</script>
+    
+</main>
+<footer>
+    <p><br>&copy; 2023 студентка групи 2БС-22б Григорук Надія</p>
+    </footer>
+</body>
+</html>
