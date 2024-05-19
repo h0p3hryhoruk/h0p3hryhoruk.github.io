@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PicLock</title>
+        <link href="style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="IM/logo.png" type="image/png"> 
+    </head>
+    <body>
+        <header>
+            <div>
+                <h3><a href="#password">Графічний пароль</a></h3>
+                <h3><a href="#app">Додаток</a></h3>
+                <h3><a href="#autor">Автор</a></h3>
+                <h3><a href="#feedback">Надіслати відгук</a></h3> <!-- New button -->
+            </div>
+        </header>
+        
+        <main id="main1">
+                      
+            <div class="first">
+
+            </div>
+            <div class="second">
+                <a name="password"></a>
+            <div class="password">
+            <section>
+                <h2>Що таке Графічний Пароль?</h2>
+                <img src="IM/1.jpg" style="height: 250px; float: right; margin: 0 0 10px 10px;">
+
+                <p>
+                    Графічний пароль - це метод аутентифікації, при якому користувач встановлює пароль, використовуючи графічні елементи, такі як малюнки, жести або комбінації на екрані пристрою. Замість традиційного текстового пароля графічний пароль вимагає від користувача вибрати або створити певний образ або послідовність рухів для доступу до системи або облікового запису.
+                </p>
+                <p>
+                    Наприклад, графічний пароль може включати в себе вибір певних точок на зображенні, намалювання певної лінії або виконання певних жестів на екрані смартфона чи планшета. Такий метод аутентифікації може бути зручним для користувачів, оскільки він може бути більш інтуїтивно зрозумілим і менше схильним до забуття, порівняно з текстовими паролями. Однак важливо забезпечити достатній рівень безпеки та уникнути простих атак на графічний пароль.
+                </p>
+            </section>
+            
+            </div>
+            <a name="app"></a>
+            <div class="app">
+            <h1>PicLock </h1>
+            <img src="IM/2.png" style="height: 350px; float: left; margin: 0 0 7px 7px;">
+
+    <p>Це додаток, який надає можливість здійснення автентифікації за допомогою унікального підходу. У цьому додатку логін може бути будь-яким рядком, а пароль визначається номерами обраних картинок та послідовністю координат точок, обраних на зображенні. Кількість точок у паролі 5.</p>
+
+    <p>Додаток володіє двома основними режимами - режимом реєстрації та режимом входу. У режимі реєстрації користувач вводить свій логін, обирає картинки та та сочки графічного паролю. У режимі входу користувач використовує введений раніше логін та обрані точки на зображенні для автентифікації.</p>
+
+    <p>Вся інформація про користувача, така як логін, параметри графічного паролю та назва файлу із зображенням, описується за допомогою класу та зберігається у файлі для подальшого використання.</p>
+
+    <p>Для зручного управління додатком використовуються елементи керування, такі як текстове поле для введення логіна, перемикачі з фіксацією для вибору режиму роботи та кнопка з текстовим полем для вибору файлу з зображенням.</p>
+
+            </div>
+            <a name="autor"></a>
+            <div class="autor">
+            <div class="author-info">
+                <img src="IM/author.jpg" alt="Автор: Григорук Надія Романівна" style="height: 300px;">
+                <h2>Автор: Григорук Надія Романівна</h2>
+                <p>Група: 2БС-22б</p>
+                <p>Факультет: ФІТКІ</p>
+                <p>Телеграм: <a href="https://t.me/nadia_grigoruk" style="color: black;">@nadia_grigoruk</a></p>
+                <p>Email: <a href="mailto:grigoruknadia15@gmail.com" style="color: black;">grigoruknadia15@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/grigoruk12/grigoruk12.github.io" style="color: black;">GitHub</a></p>
+            </div>
+        </div>
+       <!-- Your existing HTML code -->
+
+<a name="feedback"></a>
+<!-- Add this to your feedback.html where the feedback form is -->
+<div class="feedback">
+    <h2>Ваш відгук</h2>
+    <form id="feedbackForm">
+        <label for="feedbackInput">Введіть ваш відгук:</label>
+        <textarea id="feedbackInput" name="feedback" rows="4" cols="50"></textarea>
+        <button type="button" onclick="submitFeedback()">Надіслати</button>
+    </form>
+    <section class="feedback-list">
+        <h2>Відгуки</h2>
+        <!-- Display submitted feedback here -->
+        <div id="feedbackDisplay"></div>
+    </section>
+</div>
+
+            </div>
+        </main>
+
+    <footer>
+      </footer>
+    </body>
+   <script>
+    function submitFeedback() {
+    // Отримати введений відгук
+    var feedbackText = document.getElementById("feedbackInput").value;
+
+    // Перевірити, чи введений відгук не порожній
+    if (feedbackText.trim() !== "") {
+        // Створити новий елемент для відгуку
+        var newFeedback = document.createElement("div");
+        newFeedback.textContent = feedbackText;
+
+        // Додати відгук до списку
+        var feedbackDisplay = document.getElementById("feedbackDisplay");
+        feedbackDisplay.appendChild(newFeedback);
+
+        // Очистити вміст введення після надсилання
+        document.getElementById("feedbackInput").value = "";
+        alert("Дякую за відгук!");
+    } else {
+        // Вивести повідомлення, якщо введено порожній відгук
+        alert("Будь ласка, введіть ваш відгук перед надсиланням.");
+    }
+}
+
+   </script>
+</html>

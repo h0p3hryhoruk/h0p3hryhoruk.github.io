@@ -1,0 +1,130 @@
+body {
+   margin:0;
+    padding: 0;
+    background-color: #ffffff; /* Білий фон */
+    font-family: "Times New Roman", Times, serif; /* Шрифт Times New Roman */
+}
+
+/* Додайте стилі для рамок в second з права і ліва */
+.second {
+    margin-left: 15%;
+    margin-right: 15%;
+    border-left: 2px solid black; /* Чорна ліва рамка */
+    border-right: 2px solid black; /* Чорна права рамка */
+    padding: 20px; /* Відступ всередині рамок */
+}
+
+header {
+    background-color: black;
+    height: 7%;
+    width: 100%;
+    top: 0;
+    position: fixed; /* Зробіть header фіксованим */
+    z-index: 1000; /* Щоб header був найвищим елементом */
+}
+
+header h3 {
+    display: inline-block;
+    margin: 10px !important;
+    font-size: 1.17em !important;
+    color: #ffffff; /* Білий текст в меню */
+}
+
+header a {
+    text-decoration: none;
+}
+
+.first {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 700px;
+    font-family: "Times New Roman", Times, serif; /* Шрифт Times New Roman */
+    background-image: url(IM/main.png);
+    background-size: cover;
+    color: aliceblue;
+}
+
+.first h1 {
+    font-size: 83px; /* Збільшено на 3 одиниці */
+    margin-left: 15%; /* Відступ між боків по 15% */
+    margin-top: 15%;
+    color: #ffffff; /* Білий текст */
+}
+
+.second p {
+    font-size: 20px; /* Збільшено на 3 одиниці */
+    margin-left: 3%; /* Відступ між боків по 15% */
+    margin-right: 3%; /* Відступ між боків по 15% */
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+a:active {
+    color: #ffffff;
+}
+#feedback {
+    margin: 20px 0;
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+footer {
+    flex: 0 0 auto;
+    background-color: black;
+    color: #f5f5f4;
+    height: 50px;
+    text-align: center;
+}
+
+/* Стилі для наведення на посилання */
+header a:hover,
+a:visited:hover,
+a:active:hover {
+    color: #808080; /* Сірий колір при наведенні */
+}
+.autor {
+    text-align: center; /* Центрування тексту в блоку автора */
+}
+
+.author-info {
+    display: inline-block; /* Дозволяє блоку автора центрувати вміст по горизонталі */
+    text-align: left; /* Залишити текст властивостей автора зліва від центрального блоку */
+    margin-top: 20px; /* Додатковий відступ від верхнього краю */
+}
+
+.author-info img {
+    display: block; /* Забезпечення відступу від верхнього краю для зображення */
+    margin: 0 auto; /* Центрування зображення по горизонталі */
+}
